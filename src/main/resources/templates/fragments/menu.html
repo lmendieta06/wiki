@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/menu.css}">
+</head>
+<body>
+    <header th:fragment="header" class="header">
+        <a href="/" class="logo">WikiGroup</a>
+        <nav class="nav-links">
+            <a th:href="@{/pages/team}" th:class="${currentPage == 'team'} ? 'active'">Equipo</a>
+            <a th:href="@{/pages/proyecto}" th:class="${currentPage == 'proyecto'} ? 'active'">Proyecto</a>
+            <a th:href="@{/pages/arquitectura}" th:class="${currentPage == 'arquitectura'} ? 'active'">Arquitectura</a>
+            <a th:href="@{/pages/desarrollo}" th:class="${currentPage == 'desarrollo'} ? 'active'">Desarrollo y Pruebas</a>
+            <a th:href="@{/pages/despliegue}" th:class="${currentPage == 'despliegue'} ? 'active'">Despliegue</a>
+            <a th:href="@{/pages/contactanos}" th:class="${currentPage == 'contactanos'} ? 'active'">Contáctanos</a>
+        </nav>
+    </header>
+</body>
+</html>

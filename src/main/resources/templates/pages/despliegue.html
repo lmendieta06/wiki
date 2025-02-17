@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <!-- METADATOS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Team WikiGroup">
+    <meta name="keywords" content="WikiGroup, Documentación, Proyecto Final, Equipo, Arquitectura, Desarrollo, Pruebas">
+    <meta name="description" content="WikiGroup - Documentación del Proyecto Final">
+    <!-- LINK CSS -->
+    <link rel="stylesheet" th:href="@{/styles/menu.css}">
+    <link rel="stylesheet" th:href="@{/styles/footer.css}">
+    <title>WikiGroup - Despliegue</title>
+</head>
+<body>
+        <!-- HEADER -->
+        <div th:replace="~{fragments/menu :: header}"></div>
+
+
+        <!-- MAIN -->
+        <main class="main-container">
+
+        </main>
+        <!-- FOOTER -->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

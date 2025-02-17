@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <!-- METADATOS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Team WikiGroup">
+    <meta name="keywords" content="WikiGroup, Documentación, Proyecto Final, Equipo, Arquitectura, Desarrollo, Pruebas">
+    <meta name="description" content="WikiGroup - Documentación del Proyecto Final">
+    <!-- LINK CSS -->
+    <link rel="stylesheet" th:href="@{/styles/index.css}">
+    <link rel="stylesheet" th:href="@{/styles/footer.css}">
+    <title>WikiGroup - Inicio</title>
+</head>
+<body>
+        <!-- HEADER -->
+        <header class="hero">
+            <h1>WikiGroup</h1>
+            <p>Navega por nuestra documentación</p>
+        </header>
+
+        <!-- MAIN -->
+        <main class="main-container">
+                <!-- Sección Información del Proyecto -->
+            <a class="section-item" th:href="@{/pages/proyecto}">
+                <div class="icon-container">
+                    <span class="icon">📄</span>
+                </div>
+                <div class="content">
+                    <h2>Proyecto</h2>
+                    <p>Información general y requerimientos</p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+            <!-- Sección Equipo -->
+            <a class="section-item" th:href="@{/pages/team}">
+                <div class="icon-container">
+                    <span class="icon">👥</span>
+                </div>
+                <div class="content">
+                    <h2>Equipo</h2>
+                    <p>Conoce a nuestro equipo y sus roles</p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+
+            <!-- Sección Arquitectura -->
+            <a class="section-item" th:href="@{/pages/arquitectura}">
+                <div class="icon-container">
+                    <span class="icon">🏗️</span>
+                </div>
+                <div class="content">
+                    <h2>Arquitectura</h2>
+                    <p>Explora nuestros diagramas y diseños</p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+
+            <!-- Sección Desarrollo -->
+            <a class="section-item" th:href="@{/pages/desarrollo}">
+                <div class="icon-container">
+                    <span class="icon">💻</span>
+                </div>
+                <div class="content">
+                    <h2>Desarrollo y Pruebas</h2>
+                    <p>Documentación técnica y casos de prueba</p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+
+            <!-- Sección Pruebas -->
+            <a class="section-item" th:href="@{/pages/despliegue}">
+                <div class="icon-container">
+                    <span class="icon">🔍</span>
+                </div>
+                <div class="content">
+                    <h2>Despliegue</h2>
+                    <p>Versiones</p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+
+            <!-- Sección Contacto -->
+            <a class="section-item" th:href="@{/pages/contactanos}">
+                <div class="icon-container">
+                    <span class="icon">📧</span>
+                </div>
+                <div class="content">
+                    <h2>Contacto</h2>
+                    <p>Formulario de contacto</p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+        </main>
+        <!-- FOOTER -->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
