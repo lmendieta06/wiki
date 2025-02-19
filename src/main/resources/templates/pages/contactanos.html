@@ -10,6 +10,7 @@
     <!-- LINK CSS -->
     <link rel="stylesheet" th:href="@{/styles/menu.css}">
     <link rel="stylesheet" th:href="@{/styles/footer.css}">
+    <link rel="stylesheet" th:href="@{/styles/contactanos.css}">
     <title>WikiGroup - Contacto</title>
 </head>
 <body>
@@ -17,8 +18,64 @@
         <div th:replace="~{fragments/menu :: header}"></div>
 
         <!-- MAIN -->
+<!-- MAIN -->
         <main class="main-container">
+            <section class="form-wrapper">
 
+                <!-- Elementos decorativos -->
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+                <!-- Formulario -->
+                <form class="contact-form" id="contactForm" th:action="@{/pages/guardarContacto}" method="POST" th:object="${formulario}">
+                    <div class="form-grid">
+                        <!-- Nombres -->
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="text" id="nombres" name="nombres" maxlength="100" th:field="*{NOMBRE}" required placeholder="Ingrese su nombre">
+                                <div class="focus-bg"></div>
+                            </div>
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="text" id="apellidos" name="apellidos" maxlength="100" th:field="*{APELLIDO}" required placeholder="Ingrese su apellido">
+                                <div class="focus-bg"></div>
+                            </div>
+                        </div>
+
+                        <!-- Correo -->
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="email" id="correo" name="correo" maxlength="100" th:field="*{CORREO}" required placeholder="Ingrese su correo electronico">
+                                <div class="focus-bg"></div>
+                            </div>
+                        </div>
+
+                        <!-- Semestre -->
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="number" id="semestre" name="semestre" min="0" max="16" th:field="*{SEMESTRE}" required placeholder="Ingrese su semestre actual">
+                                <div class="focus-bg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Descripción -->
+                    <div class="form-group">
+                        <div class="input-container">
+                            <textarea id="descripcion" name="descripcion" rows="4" th:field="*{MENSAJE}" required placeholder="Descripción"></textarea>
+                            <div class="focus-bg"></div>
+                        </div>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="button-container">
+                        <button type="submit">Enviar Mensaje</button>
+                    </div>
+                </form>
+            </section>
         </main>
         <!-- FOOTER -->
         <div th:replace="~{fragments/footer :: footer}"></div>

@@ -1,0 +1,201 @@
+:root {
+    --gradient-1: linear-gradient(90deg, #2563eb, #4f46e5);
+    --gradient-2: linear-gradient(135deg, #EEF2FF, #E0E7FF, #EDE9FE);
+}
+/* Reset estilos para el main */
+.main-container {
+    min-height: 100vh;
+    background: var(--gradient-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del formulario */
+.form-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: 2px;
+}
+
+/* Blobs decorativos */
+.blob {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    filter: blur(40px);
+    mix-blend-mode: multiply;
+    z-index: 0;
+    animation: blob 7s infinite;
+}
+
+.blob-1 {
+    top: -2.5rem;
+    left: -2.5rem;
+    background: #BFDBFE;
+}
+
+.blob-2 {
+    top: -2.5rem;
+    right: -2.5rem;
+    background: #DDD6FE;
+    animation-delay: 2s;
+}
+
+.blob-3 {
+    bottom: -2.5rem;
+    left: 5rem;
+    background: #C7D2FE;
+    animation-delay: 4s;
+}
+
+/* Formulario */
+.contact-form {
+    /* border: 2px solid red; */
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.form-grid {
+    /* border: 2px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    margin-bottom: 2rem;
+}
+
+/* Grupos de input */
+.form-group {
+    /* border:2px solid green; */
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.input-container {
+    /* border: 2px solid pink; */
+    position: relative;
+}
+
+input{
+    width: 90%;
+    padding: 1.5rem 1rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background: transparent;
+    font-size: 1rem;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+input::placeholder{
+    color: #66666698;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+textarea{
+    width: 95%;
+    padding: 1.5rem 1rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background: transparent;
+    font-size: 1rem;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.char-count {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Efecto de fondo al focus */
+.focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-1);
+    opacity: 0.1;
+    border-radius: 0.5rem;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+}
+
+.input-container:focus-within .focus-bg {
+    transform: scaleX(1);
+}
+
+/* Botón */
+.button-container {
+    /* border: 2px solid brown; */
+    position: relative;
+    margin-top: 2rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--gradient-1);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.button-container::before {
+    position: absolute;
+    inset: -4px;
+    background: var(--gradient-1);
+    border-radius: 0.5rem;
+    opacity: 0.25;
+    filter: blur(8px);
+    transition: opacity 0.3s;
+}
+
+.button-container:hover::before {
+    opacity: 1;
+}
+
+/* Animación de los blobs */
+@keyframes blob {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(20px, 10px) scale(1.1);
+    }
+    50% {
+        transform: translate(-10px, 20px) scale(0.9);
+    }
+    75% {
+        transform: translate(-20px, -10px) scale(1.1);
+    }
+}

@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+// import co.javeriana.wiki.models.Forms;
+
 @Controller
 public class PagesController {
     // pagina de inicio
@@ -42,9 +44,10 @@ public class PagesController {
         return "pages/proyecto";
     }
     // contactanos
-    @GetMapping("/pages/contactanos")
-    public String contactanos(Model model) {
-        model.addAttribute("currentPage", "contactanos");
-        return "pages/contactanos";
-    }
+    // @GetMapping("/pages/contactanos")
+    // public String contactanos(Model model) {
+    //     model.addAttribute("currentPage", "contactanos");
+    //     model.addAttribute("formulario", new Forms());
+    //     return "pages/contactanos";
+    // }
 }
