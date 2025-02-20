@@ -1,9 +1,9 @@
 # Javeriana Wiki Project 📚
 
-## Description
-A web application platform for the Javeriana Wiki using Java MVC architecture.
+## Descripción
+Wiki con  informacion relevante del proyecto Arrienda tu finca para la clase de desarrollo web.
 
-## 💻 Tech Stack
+## 💻 Stack Tecnologico
 
 - Java
 - HTML
@@ -11,26 +11,24 @@ A web application platform for the Javeriana Wiki using Java MVC architecture.
 - JavaScript
 - Maven
 
-## 🚀 Features
+## 🚀 Funcionalidades
 
 - Patrón MVC
 - Diseño responsivo
 - Plantillas y fragmentos de páginas
 - Manejo de formularios
 
-## 🛠️ Installation
+## 🛠️ Instalacion
 
-### Clone the repository
+### Clonar repositorio
 git clone https://github.com/lmendieta06/wiki.git
-### Install dependencies
-mvn install
 
-### Run the application
+### Ejecuta la aplicacion
 mvn spring-boot:run
 
-## Authors ✨
+## Autores ✨
 
 - Laura Sofia Mendieta Garzón
 - Diego Andres Martinez Cuervo
 
-### ⌨️ with ❤️ by BackendBusters
+### ⌨️ con ❤️ by BackendBusters
