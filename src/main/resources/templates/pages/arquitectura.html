@@ -8,8 +8,8 @@
     <meta name="keywords" content="BackendBusters, Documentación, Proyecto Final, Equipo, Arquitectura, Desarrollo, Pruebas">
     <meta name="description" content="BackendBusters - Documentación del Proyecto Final">
     <!-- LINK CSS -->
-          <link rel="stylesheet" th:href="@{/styles/menu.css}">
-
+    <link rel="stylesheet" th:href="@{/styles/menu.css}">
+    <link rel="stylesheet" th:href="@{/styles/arquitectura.css}">
     <link rel="stylesheet" th:href="@{/styles/footer.css}">
     <title>BackendBusters - Arquitectura</title>
 </head>
@@ -19,9 +19,58 @@
 
         <!-- MAIN -->
         <main class="main-container">
+            <div class="header-section">
+                <h1>Arquitectura del Sistema</h1>
+                <p>Diagramas y especificaciones técnicas</p>
+            </div>
+    
+        <!-- Descripción -->
+        <div class="overview-card">
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
 
+        <!-- Selector de Diagramas -->
+        <div class="diagram-selector" id="diagramSelector">
+            <!-- Se llenará con JavaScript -->
+        </div>
+
+        <!-- Visualizador de Diagrama -->
+        <div class="diagram-viewer">
+            <div class="diagram-container">
+                <img id="diagramImage" src="" alt="Diagrama">
+            </div>
+            
+            <!-- Leyenda -->
+            <div class="diagram-legend">
+                <h3 id="diagramTitle"></h3>
+                <p id="diagramDescription"></p>
+                
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <div class="color-box blue"></div>
+                        <span>Lorem Ipsum</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box green"></div>
+                        <span>Dolor Sit</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box yellow"></div>
+                        <span>Amet Consec</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box red"></div>
+                        <span>Adipiscing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         </main>
         <!-- FOOTER -->
         <div th:replace="~{fragments/footer :: footer}"></div>
+        <script th:src="@{/scripts/arquitectura.js}"></script>
 </body>
 </html>

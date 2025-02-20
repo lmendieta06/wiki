@@ -1,0 +1,195 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* main */
+.main-container {
+    /* border: 1px solid black; */
+    max-width: 100%;
+    padding: 2rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Línea de tiempo */
+.timeline-container {
+    width: 80%;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 29px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e5e7eb;
+}
+
+.versions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.version-item {
+    position: relative;
+    padding-left: 4rem;
+}
+
+.version-circle {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    border: 4px solid white;
+}
+
+.version-content {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.version-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.version-date {
+    color: #6b7280;
+}
+
+.version-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-production {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-testing {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-development {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.changes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.change-item {
+    display: flex;
+    gap: 0.5rem;
+    color: #4b5563;
+}
+
+.change-bullet {
+    color: #3b82f6;
+}
+
+/* Información de Despliegue */
+.deploy-info {
+    margin-top: 4rem;
+}
+
+.environments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.environment {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.env-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.env-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.env-item span:first-child {
+    color: #6b7280;
+}
+
+.env-item code {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .version-item {
+        padding-left: 3rem;
+    }
+
+    .environments-grid {
+        grid-template-columns: 1fr;
+    }
+}

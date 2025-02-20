@@ -8,6 +8,7 @@
     <meta name="keywords" content="WikiGroup, Documentación, Proyecto Final, Equipo, Arquitectura, Desarrollo, Pruebas">
     <meta name="description" content="WikiGroup - Documentación del Proyecto Final">
     <!-- LINK CSS -->
+    <link rel="stylesheet" th:href="@{/styles/desarrollo.css}">
     <link rel="stylesheet" th:href="@{/styles/menu.css}">
     <link rel="stylesheet" th:href="@{/styles/footer.css}">
     <title>WikiGroup - Desarrollo</title>
@@ -19,7 +20,17 @@
 
         <!-- MAIN -->
         <main class="main-container">
-
+            <section class="construction-section">
+                <div class="construction-content">
+                    <div class="icon-container">
+                        <div class="gear gear-1">⚙️</div>
+                        <div class="gear gear-2">⚙️</div>
+                    </div>
+                    <h1>Página en Construcción</h1>
+                    <p>Estamos trabajando para traerte contenido increíble.</p>
+                    <p class="return-text">¡Vuelve pronto!</p>
+                </div>
+            </section>
         </main>
         <!-- FOOTER -->
         <div th:replace="~{fragments/footer :: footer}"></div>

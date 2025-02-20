@@ -3,30 +3,46 @@ document.addEventListener('DOMContentLoaded', function() {
     const requirements = {
         functional: [
             {
-                title: "Gestión de Documentación",
-                desc: "Sistema completo para manejar documentación técnica y guías"
+                title: "Gestión de Propiedades",
+                desc: "Para Arrendatarios: Sistema completo para crear, editar y administrar propiedades en alquiler"
             },
             {
-                title: "Sistema de Navegación",
-                desc: "Navegación intuitiva entre las diferentes secciones"
+                title: "Búsqueda Inteligente",
+                desc: "Para Arrendadores: Búsqueda avanzada de propiedades con filtros por ubicación y características"
             },
             {
-                title: "Formulario de Contacto",
-                desc: "Sistema de contacto con validaciones específicas"
+                title: "Solicitudes de Arriendo",
+                desc: "Para Ambos: Sistema de envío y gestión de solicitudes de arrendamiento con notificaciones"
+            },
+            {
+                title: "Pagos Seguros",
+                desc: "Para Arrendadores: Plataforma integrada para realizar pagos de arriendo con verificación automática"
+            },
+            {
+                title: "Sistema de Calificaciones",
+                desc: "Para Ambos: Herramienta para evaluar y comentar sobre la experiencia de arrendamiento"
             }
         ],
         nonfunctional: [
             {
-                title: "Interfaz Responsiva",
-                desc: "Diseño adaptable a múltiples dispositivos"
+                title: "Seguridad",
+                desc: "Implementación de autenticación, encriptación de datos y protección contra accesos no autorizados."
             },
             {
-                title: "Rendimiento",
-                desc: "Tiempo de carga inferior a 3 segundos"
+                title: "Escalabilidad",
+                desc: "Capacidad para manejar un crecimiento progresivo de usuarios y transacciones."
             },
             {
                 title: "Disponibilidad",
-                desc: "Sistema disponible 24/7"
+                desc: "Sistema con alta disponibilidad y tiempos de respuesta óptimos."
+            },
+            {
+                title: "Usabilidad",
+                desc: "Diseño intuitivo y accesible para diferentes tipos de usuarios."
+            },
+            {
+                title: "Eficiencia",
+                desc: "Procesos optimizados para reducir tiempos de carga y mejorar la experiencia del usuario."
             }
         ]
     };

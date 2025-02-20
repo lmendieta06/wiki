@@ -8,6 +8,7 @@
     <meta name="keywords" content="WikiGroup, Documentación, Proyecto Final, Equipo, Arquitectura, Desarrollo, Pruebas">
     <meta name="description" content="WikiGroup - Documentación del Proyecto Final">
     <!-- LINK CSS -->
+    <link rel="stylesheet" th:href="@{/styles/despliegue.css}">
     <link rel="stylesheet" th:href="@{/styles/menu.css}">
     <link rel="stylesheet" th:href="@{/styles/footer.css}">
     <title>WikiGroup - Despliegue</title>
@@ -19,9 +20,20 @@
 
         <!-- MAIN -->
         <main class="main-container">
+            <h1>Despliegue</h1>
 
+            <!-- Historial de Versiones -->
+            <div class="timeline-container">
+                <!-- La línea de tiempo se generará con JavaScript -->
+                <div class="timeline-line"></div>
+                <div id="versions-container" class="versions-container">
+                    <!-- Las versiones se agregarán aquí con JS -->
+                </div>
+            </div>
         </main>
         <!-- FOOTER -->
         <div th:replace="~{fragments/footer :: footer}"></div>
+        <script th:src="@{/scripts/despliegue.js}"></script>
+
 </body>
 </html>
