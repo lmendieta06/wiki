@@ -5,48 +5,23 @@ A web application platform for the Javeriana Wiki using Java MVC architecture.
 
 ## 💻 Tech Stack
 
-{
-  "frontend": {
-    "html": "HTML5",
-    "css": "CSS3",
-    "javascript": "Vanilla JS"
-  },
-  "backend": {
-    "language": "Java",
-    "buildTool": "Maven",
-    "architecture": "MVC Pattern"
-  },
-  "others": {
-    "versionControl": "Git",
-    "templates": "Thymeleaf"
-  }
-}
+- Java
+- HTML
+- CSS
+- JavaScript
+- Maven
 
 ## 🚀 Features
 
-const features = {
-  architecture: {
-    pattern: "Clean Architecture",
-    style: "MVC",
-    components: "Modular Design"
-  },
-  frontend: {
-    design: "Responsive",
-    templates: "Reusable Components",
-    styling: "Modern CSS"
-  },
-  backend: {
-    formHandling: true,
-    staticResources: true,
-    mvc: true
-  }
-}
+- Patrón MVC
+- Diseño responsivo
+- Plantillas y fragmentos de páginas
+- Manejo de formularios
 
 ## 🛠️ Installation
 
 ### Clone the repository
-git clone https://github.com/your-username/javeriana-wiki.git
-
+git clone https://github.com/lmendieta06/wiki.git
 ### Install dependencies
 mvn install
 
