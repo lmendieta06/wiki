@@ -1,33 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
     const versions = [
         {
-            version: "v1.0.0",
-            date: "2025-02-15",
+            version: "v1.1.0",
+            date: "2025-02-20",
             status: "Producción",
             changes: [
-                "Lanzamiento inicial",
-                "Implementación de autenticación",
-                "Sistema de documentación base"
+                "Despliegue final"
+            ]
+        },
+        {
+            version: "v1.0.0",
+            date: "2025-02-19",
+            status: "Producción",
+            changes: [
+                "Lanzamiento inicial en docker",
+            ]
+        },
+        {
+            version: "v0.3.0",
+            date: "2025-02-19",
+            status: "Desarrollo",
+            changes: [
+                "Estructura y diseño de paginas terminado"
             ]
         },
         {
             version: "v0.2.0",
-            date: "2025-02-01",
-            status: "Testing",
+            date: "2025-02-17",
+            status: "Desarrollo",
             changes: [
-                "Mejoras en la interfaz de usuario",
-                "Corrección de bugs en formularios",
-                "Optimización de rendimiento"
+                "Conexion a base de datos exitosa"
             ]
         },
         {
             version: "v0.1.0",
-            date: "2025-01-15",
+            date: "2025-02-13",
             status: "Desarrollo",
             changes: [
                 "Estructura inicial del proyecto",
                 "Configuración de entorno",
-                "Implementación básica de endpoints"
+                "Creacion del repositorio"
             ]
         }
     ];
