@@ -1,0 +1,137 @@
+{
+        "unit": [
+            {
+                "id": "CALIDAD-001",
+                "title": "Análisis de código en backend",
+                "description": "Se revisa el código del backend en busca de vulnerabilidades y malas prácticas.",
+                "designedBy": "Laura Mendieta",
+                "executedBy": "Juan Garzon",
+                "dependencies": "Código fuente del backend.",
+                "expectedResults": "Debe detectar posibles bugs y code smells.",
+                "actualResults": "[A llenar tras ejecución]",
+                "passed": "[Sí/No]",
+                "image": "backend-analysis.jpg",
+                "link": "https://ejemplo.com/backend-analysis",
+                "steps": [
+                    "Subir el código fuente al repositorio.",
+                    "Ejecutar el análisis con SonarQube.",
+                    "Revisar los reportes generados."
+                ]
+            }
+        ],
+        "load": [
+            {
+                "load": [
+                    {
+                        "id": "CARGA-001",
+                        "title": "Prueba de carga para la obtención de todos los usuarios",
+                        "description": "Se evaluará el rendimiento del endpoint /listar bajo una carga de múltiples solicitudes concurrentes para determinar el tiempo de respuesta y la estabilidad del sistema.",
+                        "designedBy": "Juan Garzon",
+                        "executedBy": "Juan Garzon",
+                        "dependencies": "Base de datos poblada con al menos 100,000 registros.",
+                        "image": "load-users.jpg",
+                        "link": "https://ejemplo.com/prueba-carga-listar",
+                        "steps": [
+                            "Configurar JMeter con 1000 solicitudes simultáneas.",
+                            "Ejecutar la prueba y medir los tiempos de respuesta.",
+                            "Revisar estabilidad del sistema bajo carga."
+                        ],
+                        "cases": [
+                            {
+                                "expectedResults": "El endpoint debe responder en menos de 10 segundos bajo una carga de 1000 solicitudes simultáneas.",
+                                "actualResults": "[A llenar tras ejecución]",
+                                "passed": "Sí"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "CARGA-002",
+                        "title": "Prueba de carga para la búsqueda de usuario por ID",
+                        "description": "Se evaluará el rendimiento del endpoint /buscar/{id} con múltiples solicitudes concurrentes para medir el tiempo de respuesta y estabilidad.",
+                        "designedBy": "Laura Mendieta",
+                        "executedBy": "Juan Garzon",
+                        "dependencies": "Base de datos con múltiples registros existentes y no existentes.",
+                        "image": "load-search-id.jpg",
+                        "link": "https://ejemplo.com/prueba-carga-id",
+                        "steps": [
+                            "Configurar JMeter con 500 solicitudes concurrentes.",
+                            "Ejecutar la prueba y medir el tiempo de respuesta.",
+                            "Revisar el rendimiento para registros existentes y no existentes."
+                        ],
+                        "cases": [
+                            {
+                                "expectedResults": "Respuesta en menos de 1 segundo bajo 500 solicitudes concurrentes.",
+                                "actualResults": "[A llenar tras ejecución]",
+                                "passed": "Sí"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "CARGA-003",
+                        "title": "Prueba de carga para la búsqueda de usuario por email",
+                        "description": "Se evaluará el rendimiento del endpoint /buscarPorEmail/{email} bajo múltiples solicitudes concurrentes.",
+                        "designedBy": "Juan Garzon",
+                        "executedBy": "Juan Garzon",
+                        "dependencies": "Base de datos con registros existentes y casos de emails no registrados.",
+                        "image": "load-search-email.jpg",
+                        "link": "https://ejemplo.com/prueba-carga-email",
+                        "steps": [
+                            "Configurar JMeter con 500 solicitudes concurrentes.",
+                            "Ejecutar la prueba para emails registrados y no registrados.",
+                            "Revisar los tiempos de respuesta."
+                        ],
+                        "cases": [
+                            {
+                                "expectedResults": "Tiempo de respuesta menor a 1.5 segundos con 500 solicitudes simultáneas.",
+                                "actualResults": "[A llenar tras ejecución]",
+                                "passed": "[Sí/No]"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "CARGA-004",
+                        "title": "Prueba de carga para la creación de usuarios",
+                        "description": "Se evaluará el rendimiento del endpoint /registrar enviando múltiples solicitudes de creación de usuario.",
+                        "designedBy": "Laura Mendieta",
+                        "executedBy": "Juan Garzon",
+                        "dependencies": "Base de datos con validaciones de duplicados y restricciones.",
+                        "image": "load-create-user.jpg",
+                        "link": "https://ejemplo.com/prueba-carga-crear",
+                        "steps": [
+                            "Configurar JMeter con 200 solicitudes concurrentes.",
+                            "Ejecutar la prueba y medir el tiempo de respuesta.",
+                            "Verificar si existen problemas de duplicados o bloqueos."
+                        ],
+                        "cases": [
+                            {
+                                "expectedResults": "Tiempo de respuesta menor a 2 segundos bajo 200 solicitudes concurrentes.",
+                                "actualResults": "[A llenar tras ejecución]",
+                                "passed": "[Sí/No]"
+                            }
+                        ]
+                    }
+                ]
+            }
+            
+        ],
+        "functional": [
+            {
+                "id": "FUNC-001",
+                "title": "Validación de creación de usuario",
+                "description": "Se verifica que el endpoint /registrar cree un usuario correctamente.",
+                "designedBy": "Juan Garzon",
+                "executedBy": "Laura Mendieta",
+                "dependencies": "Base de datos limpia.",
+                "expectedResults": "Debe devolver 201 y el usuario creado.",
+                "actualResults": "[A llenar tras ejecución]",
+                "passed": "[Sí/No]",
+                "image": "user-creation.jpg",
+                "link": "https://ejemplo.com/user-creation",
+                "steps": [
+                    "Enviar una solicitud POST a /registrar.",
+                    "Verificar que la respuesta sea 201.",
+                    "Confirmar que el usuario se creó en la base de datos."
+                ]
+            }
+        ]
+}
