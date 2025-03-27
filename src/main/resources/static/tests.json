@@ -20,8 +20,6 @@
             }
         ],
         "load": [
-            {
-                "load": [
                     {
                         "id": "CARGA-001",
                         "title": "Prueba de carga para la obtención de todos los usuarios",
@@ -29,19 +27,15 @@
                         "designedBy": "Juan Garzon",
                         "executedBy": "Juan Garzon",
                         "dependencies": "Base de datos poblada con al menos 100,000 registros.",
+                        "expectedResults": "El endpoint debe responder en menos de 10 segundos bajo una carga de 1000 solicitudes simultáneas.",
+                        "actualResults": "[A llenar tras ejecución]",
+                        "passed": "Sí",
                         "image": "load-users.jpg",
                         "link": "https://ejemplo.com/prueba-carga-listar",
                         "steps": [
                             "Configurar JMeter con 1000 solicitudes simultáneas.",
                             "Ejecutar la prueba y medir los tiempos de respuesta.",
                             "Revisar estabilidad del sistema bajo carga."
-                        ],
-                        "cases": [
-                            {
-                                "expectedResults": "El endpoint debe responder en menos de 10 segundos bajo una carga de 1000 solicitudes simultáneas.",
-                                "actualResults": "[A llenar tras ejecución]",
-                                "passed": "Sí"
-                            }
                         ]
                     },
                     {
@@ -51,21 +45,18 @@
                         "designedBy": "Laura Mendieta",
                         "executedBy": "Juan Garzon",
                         "dependencies": "Base de datos con múltiples registros existentes y no existentes.",
+                        "expectedResults": "Respuesta en menos de 1 segundo bajo 500 solicitudes concurrentes.",
+                        "actualResults": "[A llenar tras ejecución]",
+                        "passed": "Sí",
                         "image": "load-search-id.jpg",
                         "link": "https://ejemplo.com/prueba-carga-id",
                         "steps": [
                             "Configurar JMeter con 500 solicitudes concurrentes.",
                             "Ejecutar la prueba y medir el tiempo de respuesta.",
                             "Revisar el rendimiento para registros existentes y no existentes."
-                        ],
-                        "cases": [
-                            {
-                                "expectedResults": "Respuesta en menos de 1 segundo bajo 500 solicitudes concurrentes.",
-                                "actualResults": "[A llenar tras ejecución]",
-                                "passed": "Sí"
-                            }
                         ]
                     },
+
                     {
                         "id": "CARGA-003",
                         "title": "Prueba de carga para la búsqueda de usuario por email",
@@ -73,20 +64,18 @@
                         "designedBy": "Juan Garzon",
                         "executedBy": "Juan Garzon",
                         "dependencies": "Base de datos con registros existentes y casos de emails no registrados.",
+                        "expectedResults": "Tiempo de respuesta menor a 1.5 segundos con 500 solicitudes simultáneas.",
+                        "actualResults": "[A llenar tras ejecución]",
+                        "passed": "[Sí/No]",
                         "image": "load-search-email.jpg",
                         "link": "https://ejemplo.com/prueba-carga-email",
                         "steps": [
                             "Configurar JMeter con 500 solicitudes concurrentes.",
                             "Ejecutar la prueba para emails registrados y no registrados.",
                             "Revisar los tiempos de respuesta."
-                        ],
-                        "cases": [
-                            {
-                                "expectedResults": "Tiempo de respuesta menor a 1.5 segundos con 500 solicitudes simultáneas.",
-                                "actualResults": "[A llenar tras ejecución]",
-                                "passed": "[Sí/No]"
-                            }
                         ]
+
+                            
                     },
                     {
                         "id": "CARGA-004",
@@ -95,26 +84,19 @@
                         "designedBy": "Laura Mendieta",
                         "executedBy": "Juan Garzon",
                         "dependencies": "Base de datos con validaciones de duplicados y restricciones.",
+                        "expectedResults": "Tiempo de respuesta menor a 2 segundos bajo 200 solicitudes concurrentes.",
+                        "actualResults": "[A llenar tras ejecución]",
+                        "passed": "[Sí/No]",
                         "image": "load-create-user.jpg",
                         "link": "https://ejemplo.com/prueba-carga-crear",
                         "steps": [
                             "Configurar JMeter con 200 solicitudes concurrentes.",
                             "Ejecutar la prueba y medir el tiempo de respuesta.",
                             "Verificar si existen problemas de duplicados o bloqueos."
-                        ],
-                        "cases": [
-                            {
-                                "expectedResults": "Tiempo de respuesta menor a 2 segundos bajo 200 solicitudes concurrentes.",
-                                "actualResults": "[A llenar tras ejecución]",
-                                "passed": "[Sí/No]"
-                            }
                         ]
                     }
-                ]
-            }
-            
-        ],
-        "functional": [
+                ],
+            "functional": [
             {
                 "id": "FUNC-001",
                 "title": "Validación de creación de usuario",
